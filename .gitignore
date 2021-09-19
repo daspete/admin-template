@@ -1,0 +1,7 @@
+node_modules
+build
+.nuxt
+.env
+/data
+.nuxt-storybook
+storybook-static
