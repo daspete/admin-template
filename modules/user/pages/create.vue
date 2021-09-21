@@ -1,12 +1,10 @@
 <template>
-    <div class="edit">
-        edit me
-    </div>
+    <div class="userscreate">CREATE</div>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 

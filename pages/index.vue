@@ -8,11 +8,13 @@
         </div>
         <div class="flex w-full">
             <div class="w-11 bg-blue-900 text-indigo-100 overflow-y-auto px-2 py-4 flex flex-col gap-4 shadow-lg" style="height: calc(100vh - 3rem)">
-                <font-awesome-icon size="lg" :icon="['fas', `newspaper`]"  />
-                <font-awesome-icon size="lg" :icon="['fas', `newspaper`]"  />
-                <font-awesome-icon size="lg" :icon="['fas', `newspaper`]"  />
-                <font-awesome-icon size="lg" :icon="['fas', `newspaper`]"  />
-                <font-awesome-icon size="lg" :icon="['fas', `newspaper`]"  />
+                <nuxt-link
+                    v-for="(item, itemIndex) in $store.getters['mainmenu/Items']"
+                    :key="`mainmenu-item-${ itemIndex }`"
+                    :to="item.path"
+                >
+                    <font-awesome-icon size="lg" :icon="['fas', item.icon]"  />
+                </nuxt-link>
             </div>
             <div ref="treeview" class="treeview w-auto bg-white overflow-y-auto" style="height: calc(100vh - 3rem)" v-if="treeOpen">
                 <div class="sticky top-0 px-2 py-1 bg-blue-500 text-white text-right">

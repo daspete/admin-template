@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "start": "nuxt start",
+    "buildnstart": "nuxt build; nuxt start",
     "storybook": "nuxt storybook"
   },
   "dependencies": {

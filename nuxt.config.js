@@ -1,8 +1,15 @@
 export default {
     components: true,
 
+    // watch: [
+    //     '~/modules/**/*',
+    //     '~/store/**/*',
+    // ],
+
     modules: [
         'portal-vue/nuxt',
+        '~/modules/user',
+        '~/modules/media',
     ],
 
     buildModules: [
@@ -25,7 +32,7 @@ export default {
                 'faCheckCircle',
                 'faNewspaper',
                 'faSync',
-                'faTimes',
+                'faTimes', 
                 'faStream',
                 'faSitemap'
             ],
@@ -39,6 +46,10 @@ export default {
     tailwindcss: {
         // jit: true,
     },
+
+    // usermodule: {
+    //     myOption: true
+    // },
 
     storybook: {
         stories: [],
