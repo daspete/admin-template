@@ -10,17 +10,17 @@ services:
     networks:
       nodenet:
         aliases:
-          - storybookexample.localhost
+          - admintemplate.localhost
 
-  storybookexample:
-    container_name: storybookexample
+  admintemplate:
+    container_name: admintemplate
     image: node:14
     networks:
       - nodenet
     working_dir: /app
     volumes: 
       - .:/app
-    command: bash -c "yarn; yarn dev"
+    command: bash -c "yarn; yarn storybook"
 
 networks:
   nodenet:
