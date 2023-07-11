@@ -10,7 +10,7 @@ services:
     networks:
       nodenet:
         aliases:
-          - admintemplate.localhost
+          - admintemplate.test
 
   admintemplate:
     container_name: admintemplate
@@ -18,9 +18,11 @@ services:
     networks:
       - nodenet
     working_dir: /app
+    ports:
+      - 4000:4000
     volumes: 
       - .:/app
-    command: bash -c "yarn; yarn storybook"
+    command: bash -c "yarn; yarn dev"
 
 networks:
   nodenet:

@@ -6,7 +6,7 @@ map $sent_http_content_type $expires {
 
 server {
     listen 80;
-    server_name admintemplate.localhost;
+    server_name admintemplate.test;
 
     gzip on;
     gzip_types text/plain application/xml text/css application/javascript;
